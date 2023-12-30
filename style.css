@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  background-color: #fff;
+  line-height: 1.15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.btn {
+  display: inline-block;
+  padding: 1.4375rem 5.4375rem;
+  border-radius: 5.625rem 5.625rem;
+  position: relative;
+  text-decoration: none;
+}
+.btn-text {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.625rem;
+  line-height: 1.2em;
+  color: #873CEA;
+  font-weight: 700;
+  display: block;
+  position: relative;
+  padding-right: 1.25rem;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.65, 0, 0.74, 0.99);
+  transition-duration: 0.4s;
+  z-index: 5;
+}
+.btn:hover .btn-text {
+  transform: translateX(-0.3125rem);
+}
+.btn-text:after {
+  content: "+";
+  position: absolute;
+  top: 55%;
+  right: -2px;
+  transform: translate(0, -50%);
+  margin-top: -1px;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.65, 0, 0.74, 0.99);
+  transition-duration: 0.4s;
+}
+.btn:hover .btn-text:after {
+  transform: translate(3.625rem, -50%);
+}
+.btn-bg {
+  border: solid 3px #873CEA;
+  border-radius: 3.75rem 3.75rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition-property: left;
+  transition-timing-function: cubic-bezier(0.65, 0, 0.74, 0.99);
+  transition-duration: 0.4s;
+}
+.btn:hover .btn-bg {
+  left: calc(100% - 5rem);
+}
